@@ -33,6 +33,8 @@ var randomNumber,
           feedback = "Cold";
         }else if (numberDifference > 10 ){
           feedback = "Warm";
+        }else if (numberDifference >= 1 ){
+          feedback = "Hot";
         }else {
           feedback = "You Won!";
         }
