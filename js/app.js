@@ -29,7 +29,7 @@ var randomNumber,
         numberDifference = Math.abs(guessNumber - randomNumber);
         if(numberDifference > 50){
           feedback = "Ice cold";
-        }else if(numberDifference > 30 ){
+        }else if (numberDifference > 30 ){
           feedback = "Cold";
         }else if (numberDifference > 10 ){
           feedback = "Warm";
@@ -43,6 +43,15 @@ var randomNumber,
         $('#userGuess').val('');
         $('#count').text($('#guessList').children().length);
       }
+
+      $('a.new').click(function(){
+        guessNumber="";
+        guessList.children().remove();
+        $('#count').text(0);
+        $('#feedback').text("Make Your Guess");
+        randomNumber =  Math.floor((Math.random() * 100) + 1);
+
+      });
     });    
 });
 
